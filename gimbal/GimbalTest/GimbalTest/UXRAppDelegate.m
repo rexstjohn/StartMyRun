@@ -3,7 +3,7 @@
 //  GimbalTest
 //
 //  Created by Rex St. John on 4/16/14.
-//  Copyright (c) 2014 UX-RX. All rights reserved.
+//  Copyright (c) 2014 Mashery. All rights reserved.
 //
 
 #import "UXRAppDelegate.h"
@@ -12,6 +12,9 @@
 #import <FYX/FYXTransmitter.h>
 
 @implementation UXRAppDelegate
+
+#define APP_ID "XXXX"
+#define APP_SECRET "XXXX"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,7 +29,7 @@
      }];
     
     // Proximity service
-    [FYX setAppId:@"305bc04aa19c5159c791044c71a084307be656d703f86b02fc1afbf3cabb952e" appSecret:@"8fa98c5db06bc225ec9588ed74d36813794b25eec98da5663102b1052d806395" callbackUrl:@"test://authcode"];
+    [FYX setAppId:@"APP_ID" appSecret:@"APP_SECRET" callbackUrl:@"test://authcode"];
      [FYX startService:self];
     
     return YES;

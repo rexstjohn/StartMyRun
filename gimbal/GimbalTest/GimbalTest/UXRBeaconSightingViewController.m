@@ -3,12 +3,19 @@
 //  GimbalTest
 //
 //  Created by Rex St. John on 4/16/14.
-//  Copyright (c) 2014 UX-RX. All rights reserved.
+//  Copyright (c) 2014 Mashery. All rights reserved.
 //
 
 #import "UXRBeaconSightingViewController.h"
+#import <MMDK/MMDK.h>
+#import <MMDK/MMDKWorkoutManager.h>
+#import "UXRAppDelegate.h"
+#import <MMDK/MMDKActivityType.h>
 
 @interface UXRBeaconSightingViewController ()
+
+// Map My Fitness exercise recorder instance.
+@property (nonatomic, strong) MMDKRecordManager *recordManager;
 
 @end
 
