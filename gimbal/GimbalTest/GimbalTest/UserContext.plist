@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>COMMUNICATIONS_DISABLED</key>
+	<false/>
+	<key>CUSTOM_OPT_IN_FLOW</key>
+	<false/>
+	<key>PRODUCTION_API_KEY</key>
+	<string>b5835f7b-bb44-46c7-859c-ca3578b8536c</string>
+	<key>FEATURE_NAME</key>
+	<string>In-store Deals</string>
+	<key>FEATURE_DESCRIPTION</key>
+	<string>Receive exclusive offers, including ones when you are at or near Mallmart stores.</string>
+</dict>
+</plist>

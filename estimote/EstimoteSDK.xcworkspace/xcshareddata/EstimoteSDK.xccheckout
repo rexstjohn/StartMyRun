@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7C51E732-6B4A-4847-BD1E-501CFE61D8D8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EstimoteSDK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</key>
+		<string>ssh://github.com/rexstjohn/StartMyRun.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>estimote/EstimoteSDK.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3585CE6D-5854-4754-A581-0549DBE6094F</key>
+		<string>../StartMyRun</string>
+		<key>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/rexstjohn/StartMyRun.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StartMyRun</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3585CE6D-5854-4754-A581-0549DBE6094F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StartMyRun</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gimbal Sandbox Migration</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/overrides.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar-nav" onload="prettyPrint();">
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="https://manager.gimbal.com"><img src="images/gimbal_logo.png"></a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                      
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Overview
+                            <b class="caret black-caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Overview</a></li>
+                            <li><a href="proximity_overview.html">Proximity Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Context
+                            <b class="caret black-caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-submenu">
+                            <a href="#">iOS</a>
+                            <ul class="dropdown-menu">
+                              <li><a href="ios_quickstart.html">Gimbal Quick Start</a></li>
+                              <li><a href="ios_geofence_quickstart.html">Geofence Quick Start</a></li> 
+                              <li><a href="context/context_ios.html">Context Developer Guide</a></li>
+                            </ul>
+                          </li>
+                          <li class="dropdown-submenu">
+                            <a href="#">Android</a>
+                            <ul class="dropdown-menu">
+                              <li><a href="android_quickstart.html">Gimbal Quick Start</a></li>
+                              <li><a href="android_geofence_quickstart.html">Geofence Quick Start</a></li> 
+                              <li><a href="android_push_quickstart.html">Push Quick Start</a></li> 
+                              <li><a href="context/context_android.html">Context Developer Guide</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Proximity
+                            <b class="caret black-caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="proximity_overview.html">Proximity Overview</a></li>
+                          <li><a href="ios_proximity_quickstart.html">Proximity Quick Start</a></li>
+                          <li><a href="proximity/ios.html">Proximity Developer Guide</a></li>
+                          <li><a href="ios/html/index.html">Proximity API</a></li>
+                          <li><a href="ios_proximity_based_communication_guide.html">Proximity Based Communicate Guide</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rest.html">REST API</a></li>
+                    <li><a href="sandbox_decommissioning.html"><span class="label label-important">Sandbox Decommissioning</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+    <div id="sandbox-migration" class="row-fluid">
+<div class="span3">
+    <div id="sidenav" class="well sidebar-nav sidebar-nav-fixed" style="overflow-y:auto;height:auto;">
+        <ul class="nav nav-list">
+            <li class="nav-header"><a href="#migration_overview">Overview</a></li>
+        	<li class="nav-header"><a href="#create_organizations">Create an Additional Organization</a></li>
+        	<li class="nav-header"><a href="#regenerate_api_keys">Regenerate API Keys</a></li>
+        	<li class="nav-header"><a href="#migrate_geofences">Migrate Geofences</a></li>
+        	<li class="nav-header"><a href="#recreate_communications">Recreate Communications</a></li>
+        	<li class="nav-header"><a href="#export_analytics">Export Analytics</a></li>
+        	<li class="nav-header"><a href="#migrate_clients">Migrate Client applications</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="span9">
+<!-- Introduction -->
+<div id="migration_intro" class="hero-unit">
+    <h1>Gimbal Sandbox Decommissioning</h1>
+    <p>For developers who have been using Sandbox, this document describes how to migrate your existing Sandbox account data to the Production environment.</p>
+</div>
+
+
+
+
+<!-- Migration Overview -->
+<div id="migration_overview" class="row-fluid api_row">
+    <div style="height: 40px;"></div>
+    <div class="span12">
+        <h1>Overview</h1>
+        <hr>
+        <p>
+            <span class="label label-important">Important</span> The Sandbox environment will soon be decommissioned.  When the Sandbox environment is decommissioned, any data in the Sandbox environment 
+            will become inaccessible.</p>
+        <h2>What is affected?</h2>
+        <p>
+            Data in Sandbox, including:
+                <ul>
+                    <li>Gimbal application and server API keys</li>
+                    <li>Geofences</li>
+                    <li>Communications and Instant Communications</li> 
+                    <li>Triggers</li>
+                    <li>Analytics</li>
+                </ul>
+        </p>
+
+        <h2>
+            What is <strong>not</strong> affected?
+        </h2>
+        <ul>
+           <li>Production data.  Any existing API Keys, Geofences, Communications, Triggers, and Analytics in Production will not be affected.</li>
+           <li>Support tickets you created whether working in Sandbox or Production environments.
+           <li>Proximity data.  Proximity API Keys, Hubs, Rules, and Visits will not be affected.</li> 
+        </ul>
+
+        <h2>What Should I Do?</h2>
+        <p>You have the following courses of action:</p>
+        <h3>Do Nothing</h3>
+            <p> If you elect to do nothing, your Sandbox data will become inaccessible.  This option makes sense if you do not wish to preserve or keep your Sandbox data.</p>
+        <h4>or</h4>
+        <h3>Migrate Sandbox data to the Production Environment</h3>
+            <p>You can move your Sandbox Geofences into Production by importing them into an Organization within the Production environment.<p>
+            <p><span class="label label-warning">Note</span> You will, however, <strong>need to re-create</strong> any Communications, Instant Communications, and Triggers related to those Geofences.  You will <strong>not</strong> be able to migrate those over.</p>
+            <p>These are the steps you'll need to take.</p>
+            <p>
+            <ul>
+                <li>Create an additional organization in the Production environment, effectively creating a test, or "sandbox", organization.</li>
+                <li>For each existing Sandbox Gimbal application you wish to keep, generate a new Gimbal application under the new organization, using the same bundle ID / package names.</li>
+                <li>Use these new Gimbal API keys in your client applications.</li>
+                <li>Migrate existing Geofences into the new organization.</li>
+                <li>Re-create communications in the new organization.</li>
+            </ul></p>
+            <p><span class="label label-warning">Note</span> You will <strong>not</strong> be able to keep any analytics data from the Sandbox environment.  You can, however, <strong>export</strong> the data for your own purposes.</p>
+    </div>
+
+</div>
+<div id="create_organizations" class="row-fluid api_row">
+	<div style="height: 40px;"></div>
+	<div class="span12">
+	    <h1>Create an Additional Organization</h1>
+	    <hr/>
+	    <p>
+	    In lieu of a sandbox environment, Gimbal Manager now allows a developer to create multiple organizations within an account.  Each organization in Gimbal Manager is autonomous; each one will have its own application keys, server keys, geofences, communications, proximity elements, and analytics.  In this manner, you can effectively create a "sandbox organization" for testing and maintain a production organization for actual deployment, within the same account.
+		</p>
+		<p>
+			<a href="https://manager.gimbal.com/organizations" class="btn btn-primary btn-large"
+            target="_blank">Organizations &raquo;</a>		
+		</p>
+		<p><img src="images/sandbox_migration_create_organization.png"/></p>
+		<p><span class="label label-warning">Note</span> Any client API Keys (Gimbal or Proximity) created under a new Organization will be capped to a limited number of users.  This limit is lifted by submitting a Production Request and being approved.</p>
+	</div>
+</div>
+<div id="regenerate_api_keys" class="row-fluid api_row">
+	<div style="height: 40px;"></div>
+	<div class="span12">
+	    <h1>Regenerate Client API Keys</h1>
+	    <hr/>
+    	<div class="row-fluid">
+			<div class="span12">
+		    <p>For each application in Sandbox that you want to keep, you  will need to manually recreate them in Production.  After creating a test organization, login into Gimbal Manager using that organization.  Then for each Sandbox application, create an application using the same bundle ID (iOS) or package name (Android).</p>
+			<p>
+				<a href="https://manager.gimbal.com/apps/new" class="btn btn-primary btn-large"
+                target="_blank">Gimbal Manager &raquo;</a>
+			</p>
+ 	    	</div>
+		</div>
+	</div>
+</div>	
+<div id="migrate_geofences" class="row-fluid api_row">
+	<div style="height: 40px;"></div>
+	<div class="span12">
+		<h1>Migrate Geofences</h1>
+
+		<div class="row-fluid">
+			<div class="span12">
+				<p>You will need to export your geofence data from Sandbox using the Gimbal REST API.  Then you will use the Gimbal REST API on the Production environment to populate the same data.  The process involves these steps:</p>
+
+				<h2>Export Geofences from Sandbox</h2>
+
+				<p>From an HTTP client, invoke the following API to retrieve your geofence data in JSON format:</p>
+                <p>
+                    <code>GET</code>
+
+                    <code>https://sandbox.gimbal.com/api/geofences</code>
+                </p>
+                <p><span class="label label-warning">Note</span> Be sure to use your Sandbox Server API Key for this call.  It can be found under Sandbox &#8594; Organizations.</p>
+                <pre class="prettyprint lang-js">AUTHORIZATION: Token token=my_sandbox_server_api_key</pre>
+                <p>
+                    <a href="rest.html#geofences_get_all" class="btn btn-primary btn-large"
+                    target="_blank">REST API &raquo;</a>
+                </p>
+                <h3>Sample Response JSON</h3>
+				<pre class="prettyprint lang-js">
+{
+"geofences":
+    [{
+        "id": 1,
+        "name": "Gimbal HQ",
+        "addressLineOne": "5775 Morehouse Drive, San Diego CA 92121",
+        "geoFenceCircle": {
+            "radius": 100,
+            "visibility": "ORGANIZATION",
+            "location": {
+                "latitude": 32.89494374592149,
+                "longitude": -117.19603832579497
+            }
+        },
+        "placeAttributes": {
+            "key1": "value1",
+            "key2": "value2"
+        }
+    },
+    {
+        "id": 3291
+        "name": "Gimbal R&D",
+        "addressLineOne": "5665 Morehouse Drive, San Diego CA 92121",
+        "geoFencePolygon": {
+            "visibility": "ORGANIZATION",
+            "locations": [
+                {
+                    "latitude": 32.8953153522896,
+                    "longitude": -117.19559844351653
+                },
+                {
+                    "latitude": 32.8954009341414,
+                    "longitude": -117.19516929007415
+                },
+                {
+                    "latitude": 32.89564867061472,
+                    "longitude": -117.1949815354431
+                },
+                {
+                    "latitude": 32.89545949009762,
+                    "longitude": -117.19463284827117
+                },
+                {
+                    "latitude": 32.894986537037255,
+                    "longitude": -117.19496544218902
+                },
+                {
+                    "latitude": 32.894864920127866,
+                    "longitude": -117.19554479933623
+                }
+            ]
+        },
+        "placeAttributes": {
+            "key1": "value1",
+            "key2": "value2"
+        }
+    }]
+}
+				</pre>
+                <h2>Modify JSON response</h2>
+                <ul>
+                    <li>Remove the outer JSON braces to make it a pure JSON array.</li>
+                    <li>Remove "geofences" JSON key.</li>
+    				<li>Remove IDs from all Geofences.</li>
+                </ul>
+                <p><img src="images/sandbox_migration_strip_out_geofence_ids.png"/></p>
+                <h2>Import Geofences into New Organization</h2>
+                <p>From an HTTP client, invoke the following API to POST your geofence data in JSON format</p>
+                <p>
+                    <code>POST</code>
+
+                    <code>https://manager.gimbal.com/api/bulk_geofences</code>
+                </p>
+                <p><span class="label label-warning">Note</span> Be sure to use your Production Server API Key matching the new Organization you want to migrate the geofences to.</p>
+                <pre class="prettyprint lang-js">AUTHORIZATION: Token token=my_production_server_api_key_for_new_organization</pre>
+                <p>
+                    <a href="rest.html##bulk_geofences_create" class="btn btn-primary btn-large"
+                    target="_blank">REST API &raquo;</a>
+                </p>
+                <pre class="prettyprint lang-js">
+    [{
+        "name": "Gimbal HQ",
+        "addressLineOne": "5775 Morehouse Drive, San Diego CA 92121",
+        "geoFenceCircle": {
+            "radius": 100,
+            "visibility": "ORGANIZATION",
+            "location": {
+                "latitude": 32.89494374592149,
+                "longitude": -117.19603832579497
+            }
+        },
+        "placeAttributes": {
+            "key1": "value1",
+            "key2": "value2"
+        }
+    },
+    {
+        "name": "Gimbal R&D",
+        "addressLineOne": "5665 Morehouse Drive, San Diego CA 92121",
+        "geoFencePolygon": {
+            "visibility": "ORGANIZATION",
+            "locations": [
+                {
+                    "latitude": 32.8953153522896,
+                    "longitude": -117.19559844351653
+                },
+                {
+                    "latitude": 32.8954009341414,
+                    "longitude": -117.19516929007415
+                },
+                {
+                    "latitude": 32.89564867061472,
+                    "longitude": -117.1949815354431
+                },
+                {
+                    "latitude": 32.89545949009762,
+                    "longitude": -117.19463284827117
+                },
+                {
+                    "latitude": 32.894986537037255,
+                    "longitude": -117.19496544218902
+                },
+                {
+                    "latitude": 32.894864920127866,
+                    "longitude": -117.19554479933623
+                }
+            ]
+        },
+        "placeAttributes": {
+            "key1": "value1",
+            "key2": "value2"
+        }
+    }]
+                </pre>
+                <p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="recreate_communications" class="row-fluid api_row">
+	<div style="height: 40px;"></div>
+	<div class="span12">
+	    <h1>Recreate Communications</h1>
+	    <hr/>
+    	<div class="row-fluid">
+			<div class="span12">
+				<p>
+					You will need to recreate your Communications, Instant Communications, and Triggers using the Gimbal Manager or REST API.</p>
+				<p>
+					<a href="https://manager.gimbal.com/communicate" class="btn btn-primary btn-large"
+	                target="_blank">Gimbal Manager &raquo;</a>
+				</p>
+				<p>
+					<a href="rest.html#communications_create" class="btn btn-primary btn-large"
+	                target="_blank">REST API &raquo;</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="export_analytics" class="row-fluid api_row">
+	<div style="height: 40px;"></div>
+	<div class="span12">
+	    <h1>Export Analytics from Sandbox</h1>
+	    <hr/>
+	    <div class="row-fluid">
+			<div class="span12">
+				<p>Use the REST API to export analytics data you wish to archive from Sandbox.  You will not be able to migrate it to the Production environment.
+				</p>
+				<p>
+					<a href="rest.html#export_analytics" class="btn btn-primary btn-large"
+	                target="_blank">REST API &raquo;</a>
+				</p>
+			</div> 	 
+		</div>
+	</div>
+</div>
+<div id="migrate_clients" class="row-fluid api_row">
+	<div style="height: 40px;"></div>
+	<div class="span12">
+	    <h1>Migrate Client Applications</h1>
+	    <hr/>
+	    <div class="row-fluid">
+			<div class="span12">
+				<h2>Migrate iOS App</h2>
+				<p>Modify the UserContext.plist file accordingly.</p>
+				<p>Remove <code>SANDBOX_API_KEY</code>.</p>
+				<p>Remove <code>APPSTORE_BUILD</code>.</p>
+				<p>Replace <code>PRODUCTION_API_KEY</code> with the new application API key generated from your new test organization.</p>
+				<p><img src="images/sandbox_migrate_ios_api_keys.png"/></p>
+				<p>
+				<h2>Migrate Android App</h2>
+				<p>Modify the UserContext.properties file accordingly.</p>
+				<p>Replace <code>app.key</code> with the new application API key generated from your new test organization.
+				</p>
+				<p>Remove <code>env</code> as this key is no longer needed.</p>
+				<p><img src="images/sandbox_migrate_android_api_keys.png"/></p>
+				<p/>
+				<hr/>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+    <footer class="row-fluid">
+
+         
+
+             <div id="footer" class="span12">
+
+        <p>&copy; 2013 Qualcomm Retail Solutions, Inc. All rights reserved. Gimbal is a trademark of Qualcomm Retail Solutions, Inc. QUALCOMM is a trademark of QUALCOMM Incorporated, registered in the United States and other countries.</p>
+        <p>Use of the iBeacon logo means that a Licensed Product has been designed and certified by the manufacturer to meet Apple performance standards. Apple is not responsible for the operation of this device or its compliance with safety and regulatory standards. Please note that the use of this product with iPod, iPhone, or iPad may affect wireless performance.
+        </p>
+        <p>
+        iPad, iPhone, iPod, and iPod touch are trademarks of Apple Inc., registered in the U.S. and other countries. iBeacon is a trademark of Apple Inc.
+        </p>
+
+            </div>
+         
+
+    </footer>
+
+ 
+
+                
+
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="js/nav-scrolling.js"></script>
+
+</body>
+</html>
