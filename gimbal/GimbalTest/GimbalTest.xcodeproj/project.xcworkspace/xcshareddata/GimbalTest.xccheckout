@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CFBE5FE3-BA6D-48E1-96F2-AC2685F0A5E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GimbalTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</key>
+		<string>ssh://github.com/rexstjohn/StartMyRun.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>gimbal/GimbalTest/GimbalTest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/rexstjohn/StartMyRun.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>44ECCC01-4C8C-48A1-A673-34E8AF4D4E5D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StartMyRun</string>
+		</dict>
+	</array>
+</dict>
+</plist>
