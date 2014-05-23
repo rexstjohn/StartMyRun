@@ -265,6 +265,36 @@
             endingLineNumber = "132"
             landmarkName = "-testStopWorkout"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[StartMyRunTests testStopWorkout]"
+                  moduleName = "StartMyRunTests"
+                  urlString = "file:///Users/rstjohn/Documents/GitHub/StartMyRun/estimote/StartMyRun/StartMyRunTests/StartMyRunTests.m"
+                  timestampString = "422554687.824483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__34-[StartMyRunTests testStopWorkout]_block_invoke"
+                  moduleName = "StartMyRunTests"
+                  urlString = "file:///Users/rstjohn/Documents/GitHub/StartMyRun/estimote/StartMyRun/StartMyRunTests/StartMyRunTests.m"
+                  timestampString = "422554687.824696"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -286,7 +316,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StartMyRun/StartMyRunTests/StartMyRunTests.m"
@@ -302,7 +332,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StartMyRun/StartMyRunTests/StartMyRunTests.m"
@@ -318,7 +348,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StartMyRun/StartMyRunTests/StartMyRunTests.m"
@@ -360,6 +390,22 @@
             startingLineNumber = "27"
             endingLineNumber = "27"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StartMyRun/StartMyRunTests/StartMyRunTests.m"
+            timestampString = "422554660.528209"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-testMapMyRunLogin"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
